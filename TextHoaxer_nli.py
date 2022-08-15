@@ -1170,7 +1170,6 @@ def main():
                                                                      np.mean(final_sims))
 
     print(message)
-    print(orig_failures)
 
 
     with open(result_file, 'w') as csvfile: 
