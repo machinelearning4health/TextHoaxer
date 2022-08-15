@@ -831,7 +831,7 @@ def main():
                                                                      np.mean(random_sims),
                                                                      np.mean(final_sims))
     print(message)
-    print(orig_failures)
+    
 
     log=open(log_file,'a')
     log.write(message)
@@ -839,9 +839,7 @@ def main():
         csvwriter = csv.writer(csvfile)
         csvwriter.writerows(results)
 
-    print(avg)
-    print(len(f_queries))
-    print(f_queries)
+   
 
     with open(os.path.join(args.output_dir, 'adversaries.txt'), 'w') as ofile:
         for orig_text, adv_text, true_label, new_label in zip(orig_texts, adv_texts, true_labels, new_labels):
