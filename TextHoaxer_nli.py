@@ -1155,12 +1155,8 @@ def main():
             results.append(temp)
             print("Attacked: "+str(idx))
 
-    message = 'For target model using TFIDF {} on dataset window size {} with WP val {} top words {} qrs {} : ' \
-              'original accuracy: {:.3f}%, adv accuracy: {:.3f}%, random avg  change: {:.3f}% ' \
-              'avg changed rate: {:.3f}%, num of queries: {:.1f}, random_sims: {:.3f}%, final_sims : {:.3f}% \n'.format(args.target_model,
-                                                                      args.sim_score_window,
-                                                                      args.fuzz,
-                                                                      args.top_k_words,args.allowed_qrs,
+    message = 'original accuracy: {:.3f}%, adv accuracy: {:.3f}%, random avg  change: {:.3f}% ' \
+              'avg changed rate: {:.3f}%, num of queries: {:.1f}, random_sims: {:.3f}, final_sims : {:.3f} \n'.format(
                                                                      (1-orig_failures/1000)*100,
                                                                      (1-adv_failures/1000)*100,
                                                                      np.mean(random_changed_rates)*100,
